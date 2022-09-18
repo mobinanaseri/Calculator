@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="mt-5">
-            <input class="form-control " type="text" aria-label=".form-control-lg example" id="input-lg" name="total-number" disabled>
+            <input class="form-control " type="text" aria-label=".form-control-lg example" id="input-lg" name="total-number" value="0" disabled>
             <input class="form-control " type="text" aria-label=".form-control-lg example" id="input-sm" name="operation" disabled>
         </div>
         <div class="py-2 mt-1">
@@ -113,6 +113,7 @@
 <script>
 
     $(".btn").click(function () {
+        $("#input-lg").attr("value","");
         document.getElementById("input-lg").value += this.value;
         let new_input = $("#input-lg").val()
         let sum =eval(new_input)
